@@ -1,9 +1,6 @@
 package br.edu.catolica;
 
 import br.edu.catolica.domain.Accessorie;
-import br.edu.catolica.domain.Address;
-import br.edu.catolica.domain.Customer;
-import br.edu.catolica.domain.Vehicle;
 import br.edu.catolica.service.CustomerService;
 
 import java.util.List;

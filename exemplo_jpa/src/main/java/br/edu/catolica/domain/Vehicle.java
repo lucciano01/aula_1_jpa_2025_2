@@ -13,6 +13,9 @@ import java.util.Set;
 @AllArgsConstructor
 @Data
 @Builder
+@NamedQueries({
+       @NamedQuery(name = "vehicle.getAll", query = "select v from Vehicle v")
+})
 public class Vehicle {
 
     @Id

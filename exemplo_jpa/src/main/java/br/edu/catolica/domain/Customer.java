@@ -13,6 +13,11 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@NamedQueries({
+        @NamedQuery(name = "customer.ByCpf", query = "select c from Customer c where c.cpf = :cpf"),
+        @NamedQuery(name = "customer.FetchByCpf", query = "select c from Customer c" +
+                " join fetch c.vehicles v join fetch v.accessorieSet a where c.cpf =:cpf")
+})
 public class Customer {
 
     @Id

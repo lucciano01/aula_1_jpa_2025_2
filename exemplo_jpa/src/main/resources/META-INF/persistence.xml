@@ -7,6 +7,8 @@
         <class>br.edu.catolica.domain.Address</class>
         <class>br.edu.catolica.domain.Vehicle</class>
         <class>br.edu.catolica.domain.Accessorie</class>
+        <class>br.edu.catolica.domain.PessoaFisica</class>
+        <class>br.edu.catolica.domain.PessoaJuridica</class>
 
         <properties>
             <!-- Configuração JDBC -->

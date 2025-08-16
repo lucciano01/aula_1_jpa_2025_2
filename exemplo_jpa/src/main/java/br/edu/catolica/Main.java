@@ -1,9 +1,6 @@
 package br.edu.catolica;
 
-import br.edu.catolica.domain.Accessorie;
-import br.edu.catolica.domain.Address;
-import br.edu.catolica.domain.Customer;
-import br.edu.catolica.domain.Vehicle;
+import br.edu.catolica.domain.*;
 import br.edu.catolica.service.CustomerService;
 import br.edu.catolica.service.VehicleService;
 
@@ -22,7 +19,7 @@ public class Main {
         var customerService = new CustomerService();
         System.out.println("Realizando operacao no BD");
        // customerService.saveOrUpdate(joe);
-        var joe = customerService.findById(1L);
+       // var joe = customerService.findById(1L);
         var address = Address.builder()
                 .zipCode("58900-00")
                 .city("New Jersey")
@@ -69,7 +66,19 @@ public class Main {
         //System.out.println(vehicleService.getAllVehicles());
 
         //System.out.println(customerService.findByCpf("444444"));
-       System.out.println(customerService.findByCpfFetch("444444"));
+      // System.out.println(customerService.findByCpfFetch("444444"));
 
+        var pf = new PessoaFisica();
+        pf.setCpf("456");
+        pf.setNomeOuRazaoSocial("Trump");
+
+        var pessaService = new PessoaService();
+
+        var pj = new PessoaJuridica();
+        pj.setCnpj("789654621/0001-58");
+        pj.setNomeOuRazaoSocial("Super Compra");
+       // pessaService.save(pf);
+
+        System.out.println(pessaService.findById(1L));
     }
 }
